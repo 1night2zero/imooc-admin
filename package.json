@@ -9,7 +9,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
+    "element-plus": "^1.1.0-beta.15",
+    "md5": "^2.3.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
@@ -17,6 +20,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@element-plus/theme-chalk": "^2.2.16",
     "@vue/cli-plugin-babel": "~4.5.13",
     "@vue/cli-plugin-eslint": "~4.5.13",
     "@vue/cli-plugin-router": "~4.5.13",
@@ -35,7 +39,14 @@
     "husky": "^7.0.1",
     "lint-staged": "^9.5.0",
     "sass": "^1.26.5",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "svg-sprite-loader": "^6.0.9",
+    "vue-cli-plugin-element-plus": "~0.0.13"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -45,10 +56,5 @@
       "eslint --fix",
       "git add"
     ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-customizable"
-    }
   }
 }
